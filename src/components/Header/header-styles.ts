@@ -2,7 +2,8 @@ import styled from "styled-components";
 import { IPropsTheme } from "../../styles/theme";
 
 export const Container = styled.div<IPropsTheme>`
-    position: sticky;
+    position: fixed;
+
     top: 0;
     left: 0;
     z-index: 10;
@@ -13,9 +14,11 @@ export const Container = styled.div<IPropsTheme>`
     justify-content: space-between;
 
     width: 100%;
-    padding: 3rem 13%;
+    padding: 2rem 13%;
 
-    background-color: transparent;
+    background-color: rgba(10, 27, 34, .8);
+    backdrop-filter: blur(3px);
+    -webkit-backdrop-filter: blur(10px);
 
     > div#logo-header {
         width: 15rem;
