@@ -1,4 +1,6 @@
 import styled from "styled-components";
+import { emergeUpDown } from "../../styles/keyframes/emergeUpDown";
+import { emergeFromLowerLeftDiagonal } from "../../styles/keyframes/emergeFromLowerLeftDiagonal";
 
 export const Container = styled.div`
     position: relative;
@@ -22,6 +24,7 @@ export const Container = styled.div`
             height: calc(50vh - 22rem);
             margin-right: 35%;
             margin-top: 5%;
+            animation: ${emergeUpDown} 1s ease-in-out backwards;
         }
 
         > #arrow-home {
@@ -30,6 +33,8 @@ export const Container = styled.div`
             right: 0;
 
             height: calc(100vh - 23rem);
+
+            animation: ${emergeFromLowerLeftDiagonal} 1.2s ease-in-out 700ms backwards;
         }
     }
 `
