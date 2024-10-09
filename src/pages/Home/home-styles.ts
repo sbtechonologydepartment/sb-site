@@ -6,8 +6,9 @@ export const Container = styled.div`
     position: relative;
 
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     align-items: center;
+    gap: 20vh;
 
     > div#start-home {
         position: relative;

@@ -2,12 +2,12 @@ import { Header } from "../../components/Header";
 import { Container } from "./home-styles";
 import orangeArrow from '../../assets/background-arrow/blueBackground-orangeArrow.png'
 import logoSb from '../../assets/logos/Marca 05.png'
+import { AboutSb } from "../../sections/AboutSb";
 
 export function Home() {
   return (
     <Container>
       <Header />
-
 
       <div id="start-home">
 
@@ -22,6 +22,8 @@ export function Home() {
         />
 
       </div>
+
+      <AboutSb />
     </Container>
   )
 }
