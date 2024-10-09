@@ -5,6 +5,7 @@ import logoSb from '../../assets/logos/Marca 05.png'
 import { AboutSb } from "../../sections/AboutSb";
 
 export function Home() {
+
   return (
     <Container>
       <Header />
@@ -23,7 +24,8 @@ export function Home() {
 
       </div>
 
-      <AboutSb />
+      <AboutSb 
+      />
     </Container>
   )
 }

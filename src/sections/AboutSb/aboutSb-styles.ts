@@ -52,7 +52,7 @@ export const Container = styled.div<IProps>`
                 bottom: -4px;
                 left: 0;
                 border-bottom: 3px dashed ${({theme}) => theme.COLORS.ORANGE_MAIN};
-                transition: all 2s ease-in-out 1.3s;
+                transition: all 1.5s ease-in-out 1.3s;
             }
 
             span {
@@ -72,7 +72,7 @@ export const Container = styled.div<IProps>`
             line-height: 1.5;
             text-align: left;
 
-            animation: ${(props) => props.$alreadyseen === 'true' ? css`${emergeDownUp} 1.5s ease-in-out 3s backwards` : ''};
+            animation: ${(props) => props.$alreadyseen === 'true' ? css`${emergeDownUp} 1.5s ease-in-out 2.6s backwards` : ''};
         }
     }
 
@@ -85,7 +85,7 @@ export const Container = styled.div<IProps>`
 
         overflow: hidden;
 
-        animation: ${(props) => props.$alreadyseen === 'true' ? css`${emergeRightLeft} 1.5s ease-in-out 3.1s backwards` : ''};
+        animation: ${(props) => props.$alreadyseen === 'true' ? css`${emergeRightLeft} 1.5s ease-in-out 2.7s backwards` : ''};
 
         > img {
             height: 100%;

@@ -3,7 +3,11 @@ import sandraPhoto from '../../assets/photos/sandra.jpg'
 import { useInView } from "react-intersection-observer";
 import { useEffect, useState } from "react";
 
-export function AboutSb() {
+interface IPropsAboutSb {
+    [key: string]: unknown
+}
+
+export function AboutSb({...rest}: IPropsAboutSb) {
     const { ref: aboutSbRef, inView } = useInView()
     const [aboutSbAlradySeen, setAboutSbAlreadySeen] = useState<boolean>(false)
 
@@ -17,6 +21,7 @@ export function AboutSb() {
         <Container
          ref={aboutSbRef}
          $alreadyseen={aboutSbAlradySeen ? 'true' : 'false'}
+         {...rest}
         >
 
             <div id="texts">
