@@ -6,6 +6,7 @@ import { AboutSandra } from "../../sections/AboutSandra";
 import { OtherServices } from "../../sections/OtherServices";
 import imageCodeService from '../../assets/services/code-service.jpg'
 import imageSociaMediaService from '../../assets/services/social-media-manager.webp'
+import { ContactUs } from "../../sections/ContactUs";
 
 
 
@@ -48,6 +49,8 @@ export function Home() {
       <OtherServices 
         list={listOfServices}
       />
+
+      <ContactUs />
     </Container>
   )
 }
