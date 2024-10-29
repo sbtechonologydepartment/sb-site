@@ -4,26 +4,12 @@ import orangeArrow from '../../assets/background-arrow/blueBackground-orangeArro
 import logoSb from '../../assets/logos/Marca 05.png'
 import { AboutSandra } from "../../sections/AboutSandra";
 import { OtherServices } from "../../sections/OtherServices";
-import imageCodeService from '../../assets/services/code-service.jpg'
-import imageSociaMediaService from '../../assets/services/social-media-manager.webp'
 import { ContactUs } from "../../sections/ContactUs";
+import { listOfServices } from "../../data/listOfService";
 
 
 
 export function Home() {
-
-  const listOfServices = [
-    {
-      title: 'Desenvolvimento de site',
-      text: 'texto exemploa',
-      imageSrc: imageCodeService
-    },
-    {
-      title: 'Social media',
-      text: 'texto exemploa',
-      imageSrc: imageSociaMediaService
-    }
-  ]
 
   return (
     <Container>

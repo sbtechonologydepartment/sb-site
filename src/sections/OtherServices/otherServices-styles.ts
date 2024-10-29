@@ -4,14 +4,14 @@ import { IPropsTheme } from "../../styles/theme";
 export const Container = styled.div<IPropsTheme>`
     width: 100%;
     height: fit-content;
-    padding: 7% 10% 10%;
+    padding: 7% 8% 8%;
 
     background-color: ${({theme}) => theme.COLORS.LIGHT_BLUE};
 
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 4rem;
+    gap: 5rem;
 
     > div:first-child {
         display: flex;
@@ -32,9 +32,72 @@ export const Container = styled.div<IPropsTheme>`
 
     > div#listOfServices {
         display: flex;
-        flex-direction: row;
+        flex-direction: column;
         align-items: center;
-        gap: 4rem;
+        gap: 10rem;
+
+        width: 100%;
+    }
+`
+
+export const ServiceTrack = styled.div<IPropsTheme>`
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 3rem;
+
+    width: 100%;
+
+    > strong {
+        font-size: ${({theme}) => theme.FONT_SIZE.M};
+        color: ${({theme}) => theme.COLORS.WHITE};
+        margin-left: 6%;
+    }
+
+    > :last-child {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+
+        position: relative;
+        width: 100%;
+
+        > #carouselServices {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            gap: 2.8rem;
+    
+            position: relative;
+
+            width: 90%;
+    
+            overflow-x: scroll;
+            scroll-behavior: smooth;
+    
+            &::-webkit-scrollbar {
+                display: none;
+            }
+        }
+
+        > .buttonCarousel {
+            position: absolute;
+            z-index: 2;
+
+            background: none;
+            border: none;
+           
+            color: ${({theme}) => theme.COLORS.ORANGE_PRIMARY};
+            font-size: 3rem;
+            
+            &:first-child {
+                left: 0;
+            }
+            &:last-child{
+                right: 0%;
+            }
+        }
     }
 `
 
@@ -43,7 +106,8 @@ export const Service = styled.div<IPropsTheme>`
     flex-direction: column;
     align-items: center;
     gap: 2rem;
-
+    flex: none;
+    
     width: 28rem;
     height: 40rem;
 
@@ -77,9 +141,6 @@ export const Service = styled.div<IPropsTheme>`
 
             width: 100%;
             height: 20rem;
-
-            /* background-color: ${(props) => props.theme.COLORS.ORANGE_SECONDARY};
-            opacity: 50%; */
         }
     }
 
