@@ -1,8 +1,18 @@
 import { Container } from "./header-styles";
 import { FaInstagram, FaWhatsapp, FaLinkedin, FaFacebook  } from "react-icons/fa";
 import sbLogo from '../../assets/logos/Marca 01.png'
+import { dragDown } from "../../utils/dragDownFunction";
 
-export function Header() {
+export interface ITargets {
+    title: string | null
+    targetReference: HTMLElement
+}
+
+interface IPropsHeader {
+    targetingSessions: ITargets[]
+}
+
+export function Header({targetingSessions}: IPropsHeader) {
     return(
         <Container>
             <div id="logo-header">
@@ -10,14 +20,23 @@ export function Header() {
             </div>
 
             <div id="nav">
-                <a href="#">Início</a>
-                <a href="#">Sobre nós</a>
-                <a href="#">Contato</a>
-                <a href="#">Programas</a>
+                {
+                    targetingSessions.map((target, index) => (
+                        <button 
+                         onClick={(event) => dragDown(event, target.targetReference)}
+                         key={index}
+                        >
+                            {target.title}
+                         </button>
+                    ))
+                }
             </div>
 
             <div id="nav-social-media">
-                <a href="#">
+                <a 
+                 target="_blank"
+                 href="https://www.instagram.com/sbconsultoriaetreinamentos?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
+                >
                     <FaInstagram size={16} />
                 </a>
                 <a href="#">

@@ -1,13 +1,12 @@
+export function dragDown(event: React.MouseEvent<HTMLButtonElement>, reference: HTMLElement) {
+    event.preventDefault()
+  
+    if(reference && reference !== null) {
+      const distance = reference.offsetTop
 
-export function dragDown<T extends HTMLElement>(ref: React.RefObject<T>) {
-    event?.preventDefault()
-
-    if(ref.current !== null) {
-        const {top: distance} = ref.current.getBoundingClientRect()
-
-        window.scroll({
+      window.scroll({
         top: distance,
-        behavior: 'smooth'
-        })
+        behavior: "smooth"
+      })
     }
 }

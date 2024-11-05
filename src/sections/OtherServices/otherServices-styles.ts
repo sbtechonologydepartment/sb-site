@@ -1,5 +1,10 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 import { IPropsTheme } from "../../styles/theme";
+import { emergeDownUp } from "../../styles/keyframes/emergeDownUp";
+
+interface IProps extends IPropsTheme {
+    $otherServicesAlreadyseen: 'true' | 'false'
+}
 
 export const Container = styled.div<IPropsTheme>`
     width: 100%;
@@ -74,6 +79,7 @@ export const ServiceTrack = styled.div<IPropsTheme>`
             width: 90%;
     
             overflow-x: scroll;
+            overflow-y: hidden;
             scroll-behavior: smooth;
     
             &::-webkit-scrollbar {
@@ -101,7 +107,7 @@ export const ServiceTrack = styled.div<IPropsTheme>`
     }
 `
 
-export const Service = styled.div<IPropsTheme>`
+export const Service = styled.div<IProps>`
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -115,6 +121,18 @@ export const Service = styled.div<IPropsTheme>`
     border: 1px solid ${({theme}) => theme.COLORS.GRAY};
 
     background-color: ${({theme}) => theme.COLORS.DARK_BLUE};
+
+    opacity: 0;
+
+    ${
+        (props) => props.$otherServicesAlreadyseen === 'true' ? (
+            css`
+                animation: ${emergeDownUp} ease-in-out 1s both;
+                animation-delay: var(--delay-emerge);
+                --delay-emerge: 0s;
+            `
+        ) : null
+    }
 
     > :first-child {
         position: relative;

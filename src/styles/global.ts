@@ -29,6 +29,8 @@ export const GlobalStyles = createGlobalStyle<IPropsTheme>`
 
     button {
         cursor: pointer;
+        background: none;
+        border: none;
     }
 
     input:focus {

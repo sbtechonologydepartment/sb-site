@@ -1,10 +1,15 @@
-import { Container } from "./contactUs-styles";
+import { forwardRef } from "react";
 import { FiMapPin, FiPhone } from "react-icons/fi";
 import { MdOutlineMailOutline } from "react-icons/md";
+import { Container } from "./contactUs-styles";
 
-export function ContactUs() {
-    return(
-        <Container>
+export const ContactUs = forwardRef<HTMLDivElement>((props, reference) => {
+    return (
+        <Container
+         data-name='Contatos'
+         ref={reference}
+         {...props}
+        >
             <div id="contact-options">
                 <div>
                     <p>Contatos</p>
@@ -39,4 +44,4 @@ export function ContactUs() {
             </div>
         </Container>
     )
-}
+})

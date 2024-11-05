@@ -16,6 +16,7 @@ export const Container = styled.div<IProps>`
     gap: 7rem;
 
     padding-inline: 10%;
+    padding-top: 3%;
     width: 100%;
 
     > div#texts {
@@ -85,7 +86,8 @@ export const Container = styled.div<IProps>`
 
         overflow: hidden;
 
-        animation: ${(props) => props.$alreadyseen === 'true' ? css`${emergeRightLeft} 1.5s ease-in-out 2.7s backwards` : ''};
+        opacity: 0;
+        animation: ${(props) => props.$alreadyseen === 'true' ? css`${emergeRightLeft} 1.5s ease-in-out 2.7s both` : ''};
 
         > img {
             height: 100%;

@@ -39,7 +39,7 @@ export const Container = styled.div<IPropsTheme>`
 
         justify-self: center;
 
-        > a {
+        > button {
             position: relative;
 
             font-size: ${({theme}) => theme.FONT_SIZE.P};
@@ -48,11 +48,11 @@ export const Container = styled.div<IPropsTheme>`
             transition: all 500ms ease-in-out;
         }
 
-        > a:hover {
+        > button:hover {
             color: ${({theme}) => theme.COLORS.ORANGE_PRIMARY};
         }
 
-        > a::after {
+        > button::after {
             content: '';
 
             width: 0%;
@@ -67,7 +67,7 @@ export const Container = styled.div<IPropsTheme>`
             transition: width 350ms ease-in-out 251ms;
         }
 
-        > a:hover::after {
+        > button:hover::after {
             width: 100%;
             left: 0;
         }
