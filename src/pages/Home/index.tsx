@@ -8,6 +8,7 @@ import { ContactUs } from "../../sections/ContactUs";
 import { listOfServices } from "../../data/listOfService";
 import { useEffect, useRef, useState } from "react";
 import { addToListOfRefs } from "../../utils/addToRefs";
+import { AboutSb } from "../../sections/AboutSb";
 
 export function Home() {
 
@@ -51,6 +52,8 @@ export function Home() {
         />
 
       </div>
+
+      <AboutSb />
 
       <AboutSandra 
         ref={(element: HTMLDivElement) => addToListOfRefs(element, elementRefs)}
