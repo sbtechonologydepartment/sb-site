@@ -3,7 +3,7 @@ import sandraPhoto from '../../assets/photos/sandra.jpg'
 import { useInView } from "react-intersection-observer";
 import { forwardRef, useEffect, useState } from "react";
 
-export const AboutSandra = forwardRef<HTMLDivElement>((_, reference) => {
+export const AboutSandra = forwardRef<HTMLDivElement>(( ) => {
     const { ref: aboutSbRef, inView } = useInView()
     const [aboutSbAlradySeen, setAboutSbAlreadySeen] = useState<boolean>(false)
 
@@ -15,8 +15,6 @@ export const AboutSandra = forwardRef<HTMLDivElement>((_, reference) => {
 
     return (
         <Container
-         ref={reference}
-         data-name='Sobre nós'
          $alreadyseen={aboutSbAlradySeen ? 'true' : 'false'}
         >
 

@@ -53,11 +53,11 @@ export function Home() {
 
       </div>
 
-      <AboutSb />
-
-      <AboutSandra 
-        ref={(element: HTMLDivElement) => addToListOfRefs(element, elementRefs)}
+      <AboutSb 
+       ref={(element: HTMLDivElement) => addToListOfRefs(element, elementRefs)}
       />
+
+      <AboutSandra />
 
       <OtherServices 
         list={listOfServices}
