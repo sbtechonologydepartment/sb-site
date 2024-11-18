@@ -19,6 +19,7 @@ export const GlobalStyles = createGlobalStyle<IPropsTheme>`
 
     body {
         overflow-x: hidden;
+        width: 100%;
         background-color: ${({theme}) => theme.COLORS.DARK_BLUE};
     }
 

@@ -11,3 +11,13 @@ export const emergeRightLeft = keyframes`
         transform: translateX(0);
     }
 `
+
+export const emergeRightLeftWithouOpacity = keyframes`
+    from {
+        transform: translateX(90vw);
+    }
+
+    to {
+        transform: translateX(0);
+    }
+`

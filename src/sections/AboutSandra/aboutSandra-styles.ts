@@ -2,7 +2,7 @@ import styled, { css } from "styled-components";
 import { IPropsTheme } from "../../styles/theme";
 import { emergeUpDown } from "../../styles/keyframes/emergeUpDown";
 import { emergeDownUp } from "../../styles/keyframes/emergeDownUp";
-import { emergeRightLeft } from "../../styles/keyframes/emergeLeftRight";
+import { emergeRightLeft } from "../../styles/keyframes/emergeRightLeft";
 
 interface IProps extends IPropsTheme {
     $alreadyseen: 'true' | 'false'

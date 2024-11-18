@@ -1,6 +1,7 @@
 import styled, { css } from "styled-components";
 import { IPropsTheme } from "../../styles/theme";
 import { emergeUpDown } from "../../styles/keyframes/emergeUpDown";
+import { DEVICE_BREAKPOINTS } from "../../styles/deviceBreakpoints";
 
 interface IProps extends IPropsTheme {
     $alreadyseen: 'true' | 'false'
@@ -13,13 +14,13 @@ export const Container = styled.div<IProps>`
     gap: 2rem;
 
     width: 100%;
-    height: 30rem;
 
     > div#title {
         opacity: 0;
         ${(props) => props.$alreadyseen === "true" ? css`animation: ${emergeUpDown} 1.5s ease-in-out forwards;` : ""}
 
         text-align: center;
+
         span {
             display: block;
             margin-bottom: .6rem;
@@ -32,6 +33,7 @@ export const Container = styled.div<IProps>`
             font-size: ${({theme}) => theme.FONT_SIZE.XG};
             color: ${({theme}) => theme.COLORS.ORANGE_PRIMARY};
             letter-spacing: 3.5px;
+            
         }
     }
 
