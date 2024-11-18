@@ -18,6 +18,10 @@ export function Home() {
 
   
   useEffect(() => {
+    if(elementRefs.current.length > 4) {
+      elementRefs.current.length = 0
+    }
+    
     if(elementRefs.current.length > 0) {
       const newHeaderList = elementRefs.current.map((element) => ({
         title: element.getAttribute('data-name'),
