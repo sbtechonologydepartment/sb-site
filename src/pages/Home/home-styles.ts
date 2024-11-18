@@ -11,6 +11,10 @@ export const Container = styled.div`
     align-items: center;
     gap: 20vh;
 
+    @media (max-width: ${DEVICE_BREAKPOINTS.MD}) {
+        gap: 18vh;
+    }
+
     > div#start-home {
         position: relative;
         

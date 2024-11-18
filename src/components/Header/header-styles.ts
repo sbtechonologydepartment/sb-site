@@ -124,6 +124,10 @@ export const Container = styled.div<IPropsTheme>`
 `
 
 export const SideBar = styled.div<IPropsTheme>`
+    position: fixed;
+    right: 0;
+    top: 0;
+    bottom: 0;
 
     transition: all ease-in-out 1s;
     &.open {
@@ -141,10 +145,6 @@ export const SideBar = styled.div<IPropsTheme>`
 
     border-radius: 5% 0% 0% 5%;
     border-left: 1px solid ${({theme}) => theme.COLORS.GRAY};
-    
-    position: absolute;
-    right: 0;
-    top: 0;
 
     background-color: ${({theme}) => theme.COLORS.LIGHT_BLUE};
 

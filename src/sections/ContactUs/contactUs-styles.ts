@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { IPropsTheme } from "../../styles/theme";
+import { DEVICE_BREAKPOINTS } from "../../styles/deviceBreakpoints";
 
 export const Container = styled.div<IPropsTheme>`
     width: 100%;
@@ -9,6 +10,10 @@ export const Container = styled.div<IPropsTheme>`
     flex-direction: row;
     align-items: center;
     justify-content: center;
+
+    @media (max-width: ${DEVICE_BREAKPOINTS.MD}) {
+        padding: 0% 8% 25%;
+    }
     
 
     #contact-options {
@@ -46,6 +51,11 @@ export const Container = styled.div<IPropsTheme>`
                 display: flex;
                 flex-direction: row;
                 gap: 6rem;
+
+                @media (max-width: ${DEVICE_BREAKPOINTS.MD}) {
+                    flex-direction: column;
+                    gap: 4rem;
+                }
 
                 .contact-way {
                     display: flex;
