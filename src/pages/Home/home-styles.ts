@@ -18,8 +18,9 @@ export const Container = styled.div`
     > div#start-home {
         position: relative;
         
-        height: 87vh;
+        height: 85vh;
         width: 100%;
+        padding-inline: 5%;
 
         display: flex;
         flex-direction: row;
@@ -28,8 +29,8 @@ export const Container = styled.div`
 
         > #logo-home {
             max-height: 14rem;
-            height: calc(40vw - 20rem);
-            min-height: 8rem;
+            height: calc(40vw - 15rem);
+            min-height: 9rem;
 
             margin-right: 35%;
             margin-top: 5%;
@@ -37,8 +38,8 @@ export const Container = styled.div`
             animation: ${emergeUpDown} 1s ease-in-out backwards;
             z-index: 5;
 
-            @media (max-width: ${DEVICE_BREAKPOINTS.XS}){
-               
+            @media (max-width: ${DEVICE_BREAKPOINTS.SM}){
+                margin-top: -5%;
             }
         }
 
@@ -48,8 +49,8 @@ export const Container = styled.div`
             right: 0;
             z-index: 1;
 
-            min-height: 30rem;
-            height: calc(100vw - 10rem);
+            min-height: 35rem;
+            height: calc(80vw - 13rem);
             max-height: 50rem;
 
             animation: ${emergeFromLowerLeftDiagonal} 1.2s ease-in-out 700ms backwards;

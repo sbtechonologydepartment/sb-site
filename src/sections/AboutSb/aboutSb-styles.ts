@@ -39,12 +39,19 @@ export const Container = styled.div<IProps>`
 
     > div#content {
         width: 70%;
+        max-width: 82rem;
         padding: 2% 3%;
 
         outline: 1px dashed transparent;
+        border-radius: 1rem;
         transition: all 1s ease-in-out 1.2s;
 
         ${(props) => props.$alreadyseen === "true" ? css`outline: 3px dashed ${props.theme.COLORS.ORANGE_MAIN};` : ""}
+
+        @media (max-width: ${DEVICE_BREAKPOINTS.SM}) {
+            width: 84%;
+            padding: 4% 5%;
+        }
 
         p {
             transition: all 3s ease-in-out 2s;

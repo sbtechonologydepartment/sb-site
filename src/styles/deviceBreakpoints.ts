@@ -12,7 +12,3 @@ export const DEVICE_BREAKPOINTS = {
 // MD => medium
 // LG => large
 // XL => extra large
-
-// @media (max-width: ${DEVICE_BREAKPOINTS.MD}) {
-//     font-size: 1.3rem;
-// }
