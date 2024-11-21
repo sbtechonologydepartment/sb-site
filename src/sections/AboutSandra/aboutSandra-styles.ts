@@ -3,6 +3,7 @@ import { IPropsTheme } from "../../styles/theme";
 import { emergeUpDown } from "../../styles/keyframes/emergeUpDown";
 import { emergeDownUp } from "../../styles/keyframes/emergeDownUp";
 import { emergeRightLeft } from "../../styles/keyframes/emergeRightLeft";
+import { DEVICE_BREAKPOINTS } from "../../styles/deviceBreakpoints";
 
 interface IProps extends IPropsTheme {
     $alreadyseen: 'true' | 'false'
@@ -19,10 +20,14 @@ export const Container = styled.div<IProps>`
     padding-top: 3%;
     width: 100%;
 
+    @media (max-width: ${DEVICE_BREAKPOINTS.XL}) {
+        flex-direction: column ;
+    }
+
     > div#texts {
         align-self: flex-start;
 
-        width: 50rem;
+        max-width: 50rem;
 
         margin-top: 5rem;
 
@@ -43,7 +48,8 @@ export const Container = styled.div<IProps>`
 
             position: relative;
 
-            animation: ${(props) => props.$alreadyseen === 'true' ? css`${emergeUpDown} 1.5s ease-in-out backwards` : ''};
+            opacity: 0;
+            animation: ${(props) => props.$alreadyseen === 'true' ? css`${emergeUpDown} 1.5s ease-in-out both` : ''};
 
             &::after {
                 content: '';
@@ -74,6 +80,10 @@ export const Container = styled.div<IProps>`
             text-align: left;
 
             animation: ${(props) => props.$alreadyseen === 'true' ? css`${emergeDownUp} 1.5s ease-in-out 2.6s backwards` : ''};
+
+            @media (max-width: ${DEVICE_BREAKPOINTS.XL}) {
+                font-size: ${({theme}) => theme.FONT_SIZE.M};
+            }   
         }
     }
 
@@ -88,6 +98,10 @@ export const Container = styled.div<IProps>`
 
         opacity: 0;
         animation: ${(props) => props.$alreadyseen === 'true' ? css`${emergeRightLeft} 1.5s ease-in-out 2.7s both` : ''};
+
+        @media (max-width: ${DEVICE_BREAKPOINTS.XL}) {
+            display: none;
+        }
 
         > img {
             height: 100%;

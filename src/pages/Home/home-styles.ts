@@ -18,6 +18,7 @@ export const Container = styled.div`
     > div#start-home {
         position: relative;
         
+        min-height: 67rem;
         height: 85vh;
         width: 100%;
         padding-inline: 5%;

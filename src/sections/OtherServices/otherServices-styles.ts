@@ -1,6 +1,7 @@
 import styled, { css } from "styled-components";
 import { IPropsTheme } from "../../styles/theme";
 import { emergeDownUp } from "../../styles/keyframes/emergeDownUp";
+import { DEVICE_BREAKPOINTS } from "../../styles/deviceBreakpoints";
 
 interface IProps extends IPropsTheme {
     $otherServicesAlreadyseen: 'true' | 'false'
@@ -17,6 +18,10 @@ export const Container = styled.div<IPropsTheme>`
     flex-direction: column;
     align-items: center;
     gap: 5rem;
+
+    @media (max-width: ${DEVICE_BREAKPOINTS.MD}) {
+        
+    }
 
     > div:first-child {
         display: flex;
@@ -48,15 +53,23 @@ export const Container = styled.div<IPropsTheme>`
 export const ServiceTrack = styled.div<IPropsTheme>`
     display: flex;
     flex-direction: column;
-    align-items: start;
+    align-items: center;
     gap: 3rem;
 
+    min-width: 30rem;
     width: 100%;
+    max-width: 115rem;
 
     > strong {
+        align-self: start;
+
         font-size: ${({theme}) => theme.FONT_SIZE.M};
         color: ${({theme}) => theme.COLORS.WHITE};
         margin-left: 6%;
+
+        @media (max-width: ${DEVICE_BREAKPOINTS.MD}) {
+            margin-left: 12.5%;
+        }
     }
 
     > :last-child {
@@ -66,7 +79,12 @@ export const ServiceTrack = styled.div<IPropsTheme>`
         align-items: center;
 
         position: relative;
+
         width: 100%;
+
+        @media (max-width: ${DEVICE_BREAKPOINTS.MD}) {
+            padding-inline: 6.5%;
+        }
 
         > #carouselServices {
             display: flex;
@@ -101,7 +119,7 @@ export const ServiceTrack = styled.div<IPropsTheme>`
                 left: 0;
             }
             &:last-child{
-                right: 0%;
+                right: 0;
             }
         }
     }
