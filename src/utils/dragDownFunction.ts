@@ -5,7 +5,7 @@ export function dragDown(event: React.MouseEvent<HTMLButtonElement>, reference: 
       const distance = reference.offsetTop
 
       window.scroll({
-        top: distance,
+        top: distance - 60,
         behavior: "smooth"
       })
     }
