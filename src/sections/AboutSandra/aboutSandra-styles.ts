@@ -20,7 +20,7 @@ export const Container = styled.div<IProps>`
     padding-top: 3%;
     width: 100%;
 
-    @media (max-width: ${DEVICE_BREAKPOINTS.XL}) {
+    @media (max-width: ${DEVICE_BREAKPOINTS.MDD}) {
         flex-direction: column ;
     }
 
@@ -99,8 +99,9 @@ export const Container = styled.div<IProps>`
         opacity: 0;
         animation: ${(props) => props.$alreadyseen === 'true' ? css`${emergeRightLeft} 1.5s ease-in-out 2.7s both` : ''};
 
-        @media (max-width: ${DEVICE_BREAKPOINTS.XL}) {
-            display: none;
+        @media (max-width: ${DEVICE_BREAKPOINTS.MDD}) {
+            height: 47rem;
+            width: 100%;
         }
 
         > img {
