@@ -31,7 +31,7 @@ export const AboutSandra = forwardRef<HTMLDivElement>(( ) => {
 
                 <div id="text-about-sandra">
                     <p>
-                        Filha de Eloi e Maria, sou a caçula de 9 irmãos, tenho 3 filhos: Irla, Nick e João Miguel. Esposa/socia de João Paulo. Onde somos sócios de 2 empresas:Js Concultoria e Representações e a Vital Vibe. Sou fundadora da SB Consultoria e Treinamentos, onde faço atendimentos de consultoria e mentorias individuais e em grupos. Formada em administração de empresas, especialista em gestão estratégica de vendas, vendedora há 25 anos, sendo 10 como representante comercial, há dois anos venho estudando e aplicando em mim e nos clientes técnicas de desenvolvimento humano, vendas e gestão de pessoas.
+                        Sandra Barbosa é mentora de negócios, empresária e palestrante, com mais de 26 anos de experiência em vendas e gestão estratégica. Fundadora da SB Consultoria e Treinamentos, Sandra dedica sua vida a ajudar pessoas comuns a descobrirem seu propósito e conquistarem resultados extraordinários. Sua abordagem única une propósito, mentalidade empreendedora e estratégias práticas, sempre com foco em transformar vidas e negócios.
                     </p>
                 </div>
             </div>

@@ -30,7 +30,7 @@ export const ContactUs = forwardRef<HTMLDivElement>((props, reference) => {
                             <MdOutlineMailOutline />
                         </div>
 
-                        <span>contato@pstudio.com</span>
+                        <span>sbtreinamentoseconsultoria@gmail.com</span>
                     </div>
 
                     <div className="contact-way">
@@ -38,7 +38,7 @@ export const ContactUs = forwardRef<HTMLDivElement>((props, reference) => {
                             <FiPhone />
                         </div>
 
-                        <span>(35) 3456 - 7890</span>
+                        <span>(71) 9 8450 - 6215</span>
                     </div>
                 </div>
             </div>

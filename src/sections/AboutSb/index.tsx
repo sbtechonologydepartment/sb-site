@@ -21,9 +21,8 @@ export const AboutSb = forwardRef<HTMLDivElement>((_, reference) => {
 
            <div id="content">
                <p>
-                   Lorem ipsum, dolor sit amet consectetur adipisicing elit. Alias labore facere, nesciunt aliquid mollitia est rerum dolor debitis ut expedita natus deserunt, voluptates beatae, incidunt neque et tempora repellat consequatur?
-                   Lorem ipsum, dolor sit amet consectetur adipisicing elit. Alias labore facere, nesciunt aliquid mollitia est rerum dolor debitis ut expedita natus deserunt, voluptates beatae, incidunt neque et tempora repellat consequatur?
-                   Lorem ipsum, onsequatur?
+                    Transformando Pessoas e Multiplicadores de Negócios para um Futuro Sustentável.
+                    A SB Consultoria e Treinamentos é uma empresa focada no desenvolvimento humano, capacitação de profissionais e criação de negócios autossustentáveis. Nossa missão é potencializar talentos e transformar habilidades em resultados concretos, oferecendo soluções estratégicas e personalizadas para empreendedores e empresas que desejam crescer com propósito.
                </p>
            </div>
        </Container>

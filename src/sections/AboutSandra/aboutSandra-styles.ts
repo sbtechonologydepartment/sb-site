@@ -21,7 +21,7 @@ export const Container = styled.div<IProps>`
     width: 100%;
 
     @media (max-width: ${DEVICE_BREAKPOINTS.MDD}) {
-        flex-direction: column ;
+        flex-direction: column;
     }
 
     > div#texts {
@@ -34,6 +34,10 @@ export const Container = styled.div<IProps>`
         display: flex;
         flex-direction: column;
         gap: 3rem;
+
+        @media (max-width: ${DEVICE_BREAKPOINTS.MDD}) {
+            align-self: center;
+        }
 
         > div#title-section {
             display: flex;
@@ -79,11 +83,7 @@ export const Container = styled.div<IProps>`
             line-height: 1.5;
             text-align: left;
 
-            animation: ${(props) => props.$alreadyseen === 'true' ? css`${emergeDownUp} 1.5s ease-in-out 2.6s backwards` : ''};
-
-            @media (max-width: ${DEVICE_BREAKPOINTS.XL}) {
-                font-size: ${({theme}) => theme.FONT_SIZE.M};
-            }   
+            animation: ${(props) => props.$alreadyseen === 'true' ? css`${emergeDownUp} 1.5s ease-in-out 2.6s backwards` : ''}
         }
     }
 
@@ -101,7 +101,10 @@ export const Container = styled.div<IProps>`
 
         @media (max-width: ${DEVICE_BREAKPOINTS.MDD}) {
             height: 47rem;
+            max-width: 42rem;
             width: 100%;
+
+            animation: ${(props) => props.$alreadyseen === 'true' ? css`${emergeDownUp} 1.5s ease-in-out 3.5s both` : ''};
         }
 
         > img {

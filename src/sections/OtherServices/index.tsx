@@ -101,7 +101,6 @@ export const OtherServices = forwardRef<HTMLDivElement, IPropsOtherServices>((pr
                                                    <strong>{service.title}</strong>
                                                    <p>
                                                        {service.text}
-                                                       Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis odio perferendis numquam vero dolor, quam, eveniet mollitia cumque cupiditate inventore soluta eaque, consequuntur illo voluptas. Ducimus natus dolorum unde laborum!
                                                    </p>
                                                </div>
                                            </Service>

@@ -194,8 +194,9 @@ export const Service = styled.div<IProps>`
 
         > p {
             font-size: ${({theme}) => theme.FONT_SIZE.P};
-            text-align: justify;
+            text-align: left;
             color: ${({theme}) => theme.COLORS.STRONG_GRAY};
+            line-height: 1.35;
         }
     }
 `
