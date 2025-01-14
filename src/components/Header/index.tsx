@@ -1,10 +1,11 @@
 import { Container, SideBar } from "./header-styles";
-import { FaInstagram, FaWhatsapp, FaLinkedin, FaFacebook  } from "react-icons/fa";
+import { FaInstagram, FaWhatsapp, FaLinkedin, FaYoutube  } from "react-icons/fa";
 import sbLogo from '../../assets/logos/Marca 01.png'
 import { dragDown } from "../../utils/dragDownFunction";
 import { AiOutlineBars } from "react-icons/ai";
 import { IoClose } from "react-icons/io5";
 import { useEffect, useState } from "react";
+import { generateWhatsappLink } from "../../api/whatsapp_api";
 
 export interface ITargets {
     title: string | null
@@ -86,14 +87,23 @@ export function Header({targetingSessions}: IPropsHeader) {
                             >
                                 <FaInstagram size={16} />
                             </a>
-                            <a href="#">
+                            <a 
+                             href={generateWhatsappLink('5571992035680')}
+                             target="_blank"
+                            >
                                 <FaWhatsapp size={16} />
                             </a>
-                            <a href="#">
+                            <a 
+                             href="https://www.linkedin.com/in/sandra-consult/"
+                             target="_blank"
+                            >
                                 <FaLinkedin size={16} />
                             </a>
-                            <a href="#">
-                                <FaFacebook size={16} />
+                            <a 
+                             href="https://youtube.com/@sandraconsult?si=D-NcsDyEhi6ymW6E"
+                             target="_blank"
+                            >
+                                <FaYoutube size={16} />
                             </a>
                         </div>
                     </div>
@@ -142,8 +152,8 @@ export function Header({targetingSessions}: IPropsHeader) {
                         </div>
 
                         <div 
-                        id="nav-social-media-side-bar"
-                        className="nav-social-media"
+                         id="nav-social-media-side-bar"
+                         className="nav-social-media"
                         >
                             <a 
                             target="_blank"
@@ -151,14 +161,17 @@ export function Header({targetingSessions}: IPropsHeader) {
                             >
                                 <FaInstagram size={16} />
                             </a>
-                            <a href="#">
+                            <a 
+                             href="https://wa.me/5571984506215?text=exemploTeste"
+                             target="_blank"
+                            >
                                 <FaWhatsapp size={16} />
                             </a>
-                            <a href="#">
+                            <a href="https://www.linkedin.com/in/sandra-consult/">
                                 <FaLinkedin size={16} />
                             </a>
-                            <a href="#">
-                                <FaFacebook size={16} />
+                            <a href="https://youtube.com/@sandraconsult?si=D-NcsDyEhi6ymW6E">
+                                <FaYoutube size={16} />
                             </a>
                         </div>
                     </SideBar>

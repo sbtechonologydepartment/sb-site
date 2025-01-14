@@ -41,6 +41,14 @@ export const ContactUs = forwardRef<HTMLDivElement>((props, reference) => {
                         <span>(71) 9 8450 - 6215</span>
                     </div>
                 </div>
+
+                <div id="copyright">
+                    <p>
+                        © Copyright - 2025 - <strong>Sb treinamento</strong>. Todos os direitos reservados.
+                        <br/>
+                        SB CONSULTORIA E TREINAMENTOS LTDA - CNPJ: 48.860.389/0001-71
+                    </p>
+                </div>
             </div>
         </Container>
     )

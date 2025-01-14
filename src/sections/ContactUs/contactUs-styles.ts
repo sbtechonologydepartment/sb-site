@@ -81,5 +81,24 @@ export const Container = styled.div<IPropsTheme>`
                     }
                 }
             }
+
+            > div#copyright {
+                margin-top: 5rem;
+
+                width: fit-content;
+                align-self: center;
+
+                p {
+
+                    font-size: 1.3rem;
+                    color: ${({theme}) => theme.COLORS.GRAY};
+                    text-align: center;
+                    line-height: 2.2;
+
+                    strong {
+                        color: #fff;
+                    }
+                }
+            }
         }
 `
