@@ -4,6 +4,7 @@ import { IPropsTheme } from "./theme";
 export const GlobalStyles = createGlobalStyle<IPropsTheme>`
     html {
         scroll-behavior: smooth;
+        -webkit-tap-highlight-color: transparent;
     }
 
     * {

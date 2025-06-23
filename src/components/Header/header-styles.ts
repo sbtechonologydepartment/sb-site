@@ -18,6 +18,9 @@ export const Container = styled.div<IPropsTheme>`
     width: 100%;
     padding: 2rem 13%;
 
+    border-bottom: .1px solid rgba(228, 123, 47, .3);
+    border-radius: 0 0 4rem 4rem;
+
     background-color: rgba(10, 27, 34, .8);
     backdrop-filter: blur(3px);
     -webkit-backdrop-filter: blur(10px);

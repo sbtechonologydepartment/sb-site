@@ -63,7 +63,7 @@ export const listOfServices: IServices[][] = [
     {
       track: 'Agência de marketing',
       title: 'Social media',
-      text: 'texto exemploa',
+      text: 'Um serviço completo de gestão de redes sociais para destacar sua marca no mercado. Criamos conteúdos estratégicos, planejamos postagens e interagimos com seu público, tudo focado em atrair clientes e gerar resultados.',
       imageSrc: imageSociaMediaService
     }
   ]

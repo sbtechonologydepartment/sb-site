@@ -83,7 +83,8 @@ export const Container = styled.div<IPropsTheme>`
             }
 
             > div#copyright {
-                margin-top: 5rem;
+                margin-top: 10rem;
+                margin-bottom: -2rem;
 
                 width: fit-content;
                 align-self: center;
